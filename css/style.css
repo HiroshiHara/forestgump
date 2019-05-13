@@ -91,4 +91,31 @@ body {
 .about:hover {
   opacity: 0.9;
 }
-/* live-info*/
+/* live*/
+/* wrapper用のclearfix */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.live {
+  position: relative;
+  background-color: #ede6d0;
+  color: #211b09;
+  padding: 80px;
+  transition: opacity 0.2s;
+}
+.live:hover {
+  opacity: 0.9;
+}
+.left-item {
+
+}
+.left-item .live-image {
+  float: left;
+  height: 20%;
+  width: 20%;
+}
+.right-item {
+  float: right;
+}
