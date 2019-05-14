@@ -55,15 +55,17 @@
   <section class="contact" id="contact">
     <h2 class="heading">CONTACT</h2>
     <form class="contact-form" action="index.html" method="post">
-      <input type="text" name="name" placeholder="NAME">
-      <input type="email" name="email" placeholder="E-MAIL">
-      <textarea name="message" placeholder="MESSAGE"></textarea>
-      <input type="button" value="SEND">
+      <input type="text" name="name" placeholder="NAME" autocomplete="off">
+      <input type="email" name="email" placeholder="E-MAIL" autocomplete="off">
+      <textarea name="message" placeholder="MESSAGE" autocomplete="off"></textarea>
+      <input type="submit" value="SEND">
     </form>
   </section>
   <footer class="footer">
-
+    © Hiroshi Hara
   </footer>
+  <!-- IE9以前でもplaceholder属性が使えるようにするpolyfill -->
+  <script src="js/placeholders.min.js" charset="utf-8"></script>
 </body>
 
 </html>
