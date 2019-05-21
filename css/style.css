@@ -177,3 +177,60 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   color: #000;
 }
+
+/* viewportの幅が768px以下の場合に適用するCSS */
+@media (max-width: 768px) {
+  .site-title-sub::before,
+  .site-title-sub::after {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+  .site-title-sub {
+    font-size: 1.7rem;
+  }
+  .site-title {
+    margin-top: 35px;
+    font-size: 5rem;
+  }
+  .header {
+    padding-top: 60px;
+  }
+  .button:hover {
+    opacity: 1;
+  }
+  .heading {
+    font-size: 2.5rem;
+  }
+  .heading::before,
+  .heading::after {
+    height: 8px;
+    width: 8px;
+    margin: 0 8px 0;
+    vertical-align: 5px;
+  }
+  body {
+    font-size: 1.3rem;
+  }
+  .about-text {
+    line-height: 1.8;
+  }
+  .about {
+    opacity: 0.9;
+  }
+  .live-text {
+    line-height: 1.8;
+  }
+  .member-text {
+    line-height: 1.8;
+  }
+  .live {
+    opacity: 0.9;
+  }
+  .contact-form {
+    width: 80%;
+  }
+  .contact {
+    padding-bottom: 80px;
+  }
+}
