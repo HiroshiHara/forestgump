@@ -4,7 +4,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  padding: 30px;
+  padding: 75px;
   background: #c9c097 url('../images/bg.png') no-repeat fixed left bottom;
   background-size: cover;
   color: #fff;
@@ -19,7 +19,7 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 .item {
-  width: 364px;
+  width: 220px;
   margin-bottom: 4px;
   padding: 8px;
   background-color: #ede6d0;
@@ -31,8 +31,31 @@ a:link, a:visited, a:hover, a:active {
   display: block;
   width: 100%;
 }
+.item .member-name {
+  margin: 15px 9px 10px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+.item .member-name::before {
+  content: '';
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 2px solid;
+  margin-right: 5px;
+  border-radius: 50%;
+  vertical-align: -5px;
+}
+.item .instruments {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  list-style: none;
+}
+
 .header {
-  width: 362px;
+  width: 444px;
   text-align: center;
   background-color: #211b09;
   color: #ede6d0;
@@ -47,7 +70,7 @@ a:link, a:visited, a:hover, a:active {
   letter-spacing: 1px;
   margin-bottom: 9px;
 }
-.header .button {
+.button {
   display: inline-block;
   width: 100px;
   padding: 5px;
@@ -61,4 +84,11 @@ a:link, a:visited, a:hover, a:active {
 }
 .button:hover {
   opacity: 0.9;
+}
+.footer {
+  width: 444px;
+  text-align: center;
+}
+.footer-text {
+  margin-bottom: 7px;
 }
