@@ -4,6 +4,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  position: relative;
   padding: 75px;
   background: #c9c097 url('../images/bg.png') no-repeat fixed left bottom;
   background-size: cover;
@@ -139,6 +140,33 @@ a:link, a:visited, a:hover, a:active {
 }
 .footer-text {
   margin-bottom: 7px;
+}
+/* modal window css*/
+.modal {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(200, 200, 200, 0.8);
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+.modal .inner {
+  position: absolute;
+  z-index: 11;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 @media (max-width: 1024px) {
   body {
