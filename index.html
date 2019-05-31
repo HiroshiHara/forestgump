@@ -6,11 +6,11 @@
   <title>Forest Gump Jazz Workers</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/modaal.min.css">
   <!-- IE9以前でもplaceholder属性が使えるようにするpolyfill -->
   <script src="js/placeholders.min.js" charset="utf-8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
   <script src="js/modaal.min.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="css/modaal.min.css">
 </head>
 
 <body>
@@ -44,7 +44,9 @@
         また、県内ジャズフェスへの出演など各種イベントでの演奏も行っています。<br>
         メンバーによっては別バンドでのライブもあり、FGJWの音楽的多様性に貢献しています。
       </p>
-      <a class="live-info button" href="#">Ticket & History</a>
+      <a class="live-info button" data-group="gallery" href="images/live1.jpg">INFO & HISTORY</a>
+      <a class="live-info button" data-group="gallery" href="images/live1.jpg" style="display:none;">Flyer</a>
+      <a class="live-info button" data-group="gallery" href="images/live1.jpg" style="display:none;">Flyer</a>
     </div>
   </section>
   <section class="member">
@@ -67,6 +69,11 @@
   <footer class="footer">
     © Hiroshi Hara
   </footer>
+  <script type="text/javascript">
+  $('.live-info').modaal( {
+    type: 'image'
+  });
+  </script>
 </body>
 
 </html>
