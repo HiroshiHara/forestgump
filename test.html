@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/test.css">
+  <link rel="stylesheet" href="css/modaal.min.css">
+  <title>modal test</title>
+</head>
+
+<body>
+  <div class="members">
+    <section class="item member">
+      <a href="#detail" class="detail">
+        <img src="images/member_sample.jpg" alt="">
+        <div class="member-name">name</div>
+        <nav class="instruments">
+          <li class="nav-item">Drums</li>
+          <li class="nav-item">Percussion</li>
+        </nav>
+      </a>
+      <div id="detail" style="display:none;">
+        <h3>title</h3>
+        <p>text</p>
+      </div>
+    </section>
+    <section class="item member">
+      <a href="#detail" class="detail">
+        <img src="images/member_sample.jpg" alt="">
+        <div class="member-name">name</div>
+        <nav class="instruments">
+          <li class="nav-item">Drums</li>
+          <li class="nav-item">Percussion</li>
+        </nav>
+      </a>
+      <div id="detail" style="display:none;">
+        <h3>title</h3>
+        <p>text</p>
+      </div>
+    </section>
+  </div>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+      new Masonry('body', {
+        itemSelector: '.item',
+        columnWidth: 220,
+        gutter: 4
+      });
+    };
+    </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <script src="js/modaal.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('.detail').modaal();
+  </script>
+</body>
+
+</html>

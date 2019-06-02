@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 html {
   font-size: 62.5%;
 }
@@ -103,22 +102,6 @@ a:link, a:visited, a:hover, a:active {
   left: 50%;
   opacity: 1;
 }
-.header {
-  width: 892px;
-  text-align: center;
-  background-color: #211b09;
-  color: #ede6d0;
-  border: 2px solid;
-}
-.header .header-title {
-  font-size: 2.2rem;
-  margin-bottom: 5px;
-}
-.header .intro-text {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  margin-bottom: 9px;
-}
 .button {
   display: inline-block;
   width: 100px;
@@ -133,16 +116,4 @@ a:link, a:visited, a:hover, a:active {
 }
 .button:hover {
   opacity: 0.9;
-}
-.footer {
-  width: 892px;
-  text-align: center;
-}
-.footer-text {
-  margin-bottom: 7px;
-}
-@media (max-width: 1024px) {
-  body {
-    padding: 50px 50px 10px 50px;
-  }
 }
