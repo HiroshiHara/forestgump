@@ -108,12 +108,36 @@
   width: 100%;
   margin: auto;
   text-align: left;
-  color: #000;
+  color: #211b09;
   max-width: 1000px;
-  border-radius: 0;
-  background: #fff;
+  border-radius: 5%;
+  background: #ede6d0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
   cursor: auto
+}
+/* add original css*/
+.modaal-content-container {
+  text-align: center;
+}
+.modaal-content-container .modal-title {
+  color: #777;
+  height: 40px;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  margin-bottom: 20px;
+}
+.modaal-content-container .modal-image {
+  width: 400px;
+  height: 300px;
+  border-radius: 5%;
+  margin-bottom: 20px;
+}
+.modaal-content-container .modal-text {
+  height: 98px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 .modaal-container.is_loading {

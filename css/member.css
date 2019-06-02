@@ -141,6 +141,8 @@ a:link, a:visited, a:hover, a:active {
 .footer-text {
   margin-bottom: 7px;
 }
+/* modal window css */
+
 @media (max-width: 1024px) {
   body {
     padding: 50px 50px 10px 50px;

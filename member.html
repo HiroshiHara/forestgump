@@ -30,8 +30,18 @@
       <!-- modal window -->
       <div id="detail" style="display:none;">
         <h3 class="modal-title">Jhon Smith</h3>
-        <img class="modal-image" src="images/member-sample.jpg" alt="photo">
-        <p class="modal-text">intro</p>
+        <img class="modal-image" src="images/member_sample.jpg" alt="photo">
+        <!-- 自己紹介テキストは445バイトまで -->
+        <p class="modal-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </div>
     </section>
     <section class="item member">
@@ -222,7 +232,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
   <script src="js/modaal.min.js" charset="utf-8"></script>
   <script type="text/javascript">
-    $('.detail').modaal();
+    $('.detail').modaal({
+      width: 580,
+      height: 550
+    });
   </script>
 </body>
 
