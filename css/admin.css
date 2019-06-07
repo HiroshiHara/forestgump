@@ -11,3 +11,6 @@ body {
 *, *::before, *::after {
   box-sizing: content-box;
 }
+.navbar-brand {
+  font-size: 1.6rem;
+}
