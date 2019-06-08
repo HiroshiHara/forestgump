@@ -13,25 +13,93 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-dark mb-2">
-    <a href="#" class="navbar-brand">Edit Menu</a>
-    <button type="button" class="navbar-toggler"
-      data-toggle="collapse"
-      data-target="#navmenu"
-      aria-controls="navmenu"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
+  <!-- navigation bar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-2">
+    <a href="#" class="navbar-brand">FGJW</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navmenu">
       <div class="navbar-nav">
-        <a href="#" class="nav-item nav-link">FLYER</a>
-        <a href="#" class="nav-item nav-link">MEMBER</a>
-        <a href="#" class="nav-item nav-link">AUTHENTICATION</a>
+        <a href="#member-wrapper" class="nav-item nav-link">MEMBER</a>
+        <a href="#flyer-wrapper" class="nav-item nav-link">FLYER</a>
+        <a href="#auth-wrapper" class="nav-item nav-link">AUTHENTICATION</a>
         <a href="#" class="nav-item nav-link">LOGOUT</a>
       </div>
     </div>
   </nav>
+  <!-- container -->
+  <div class="container">
+    <!-- member-list -->
+    <div class="member-wrapper" id="member-wrapper">
+      <h3>MEMBER</h3>
+      <table class="table table-bordered table-hover member-table">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>REGIST DATE</th>
+          </tr>
+        </thead>
+        <div class="member-list">
+          <!-- 要素の数だけ繰り返し表示 -->
+          <tr>
+            <td><a href="#">1000</a></td>
+            <td>Shunsuke Mori</td>
+            <td>2019/06/07</td>
+          </tr>
+          <tr>
+            <td><a href="#">1001</a></td>
+            <td>Jun Nasuno</td>
+            <td>2019/06/07</td>
+          </tr>
+          <tr>
+            <td><a href="#">1002</a></td>
+            <td>Masahito Nobe</td>
+            <td>2019/06/07</td>
+          </tr>
+          <!-- 要素の数だけ繰り返し表示ここまで -->
+        </div>
+      </table>
+      <a href="#" class="add-button">ADD</a>
+    </div>
+    <!-- flyer-list -->
+    <div class="flyer-wrapper" id="flyer-wrapper">
+      <h3>FLYER</h3>
+      <table class="table table-bordered table-hover flyer-table">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>LIVE DATE</th>
+          </tr>
+        </thead>
+        <div class="flyer-list">
+          <!-- 要素の数だけ繰り返し表示 -->
+          <tr>
+            <td><a href="#">1000</a></td>
+            <td>1st Live at LIFETIME</td>
+            <td>2012/03/04</td>
+          </tr>
+          <tr>
+            <td><a href="#">1001</a></td>
+            <td>KIRAKU@2012</td>
+            <td>2012/03/23</td>
+          </tr>
+          <tr>
+            <td><a href="#">1002</a></td>
+            <td>対バン vs SSH</td>
+            <td>2012/05/15</td>
+          </tr>
+          <!-- 要素の数だけ繰り返し表示ここまで -->
+        </div>
+      </table>
+      <a href="#" class="add-button">ADD</a>
+    </div>
+    <div class="auth-wrapper" id="auth-wrapper">
+
+    </div>
+  </div>
 </body>
 
 </html>

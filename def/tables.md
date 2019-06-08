@@ -10,6 +10,7 @@ registdate date
 ##### フライヤー flyer
 flyerid serial, not null, primary key
 flyerid_nk integer
+livetitle varchar(60)
 flyerpict bytea
 livedate date
 registdate date

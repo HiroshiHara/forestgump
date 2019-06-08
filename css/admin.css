@@ -3,14 +3,64 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-color: #f4ebcb;
+  background-color: #fff;
   color: #3a382c;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 *, *::before, *::after {
   box-sizing: content-box;
 }
 .navbar-brand {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
+  color: #f2964f !important;
+  letter-spacing: 2px;
+}
+.nav-item {
+  padding-left: 20px !important;
+}
+a {
+  text-decoration: none !important;
+  color: #3a382c;
+  font-weight: bold;
+}
+a:hover {
+  color: #f2964f;
+}
+.container {
+  padding-top: 30px;
+}
+h3 {
+  color: #3a382c;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.member-wrapper {
+  padding-bottom: 50px;
+}
+.flyer-wrapper {
+  padding-bottom: 50px;
+}
+.add-button {
+  display: inline-block;
+  color: #3a382c;
+  background-color: #f2964f;
+  text-align: center;
+  width: 70px;
+  height: 30px;
+  padding-top: 5px;
+  box-shadow: 0 5px rgba(170, 109, 61, 1);
+  -webkit-box-shadow: 0 5px rgba(170, 109, 61, 1);
+  -ms-box-shadow: 0 5px rgba(170, 109, 61, 1);
+}
+.add-button:active {
+  transform: translateY(5px);
+  -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+}
+.add-button:hover {
+  color: #3a382c;
 }
