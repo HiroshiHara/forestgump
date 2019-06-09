@@ -41,7 +41,7 @@ h3 {
 .flyer-wrapper {
   padding-bottom: 50px;
 }
-.add-button {
+.button {
   display: inline-block;
   color: #3a382c;
   background-color: #f2964f;
@@ -53,7 +53,7 @@ h3 {
   -webkit-box-shadow: 0 5px rgba(170, 109, 61, 1);
   -ms-box-shadow: 0 5px rgba(170, 109, 61, 1);
 }
-.add-button:active {
+.button:active {
   transform: translateY(5px);
   -webkit-transform: translateY(5px);
   -ms-transform: translateY(5px);
@@ -61,6 +61,38 @@ h3 {
   -webkit-box-shadow: none;
   -ms-box-shadow: none;
 }
-.add-button:hover {
+.button:hover {
   color: #3a382c;
+}
+h3 {
+  display: inline-block;
+}
+.collapse-button {
+  display: inline-block;
+  color: #3a382c;
+  background-color: #f2964f;
+  text-align: center;
+  width: 30px;
+  height: 15px;
+  padding-bottom: 6px;
+  box-shadow: 0 2.5px rgba(170, 109, 61, 1);
+  -webkit-box-shadow: 0 2.5px rgba(170, 109, 61, 1);
+  -ms-box-shadow: 0 2.5px rgba(170, 109, 61, 1);
+}
+.collapse-button:active {
+  transform: translateY(2.5px);
+  -webkit-transform: translateY(2.5px);
+  -ms-transform: translateY(2.5px);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+}
+.collapse-button:hover {
+  color: #3a382c;
+}
+/* overwrite bootstrap.css */
+.collapsing {
+  transition: height 0.15s ease;
+  -webkit-transition: height 0.15s ease;
+  -ms-transition: height 0.15s ease;
 }

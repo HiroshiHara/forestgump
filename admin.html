@@ -32,7 +32,14 @@
     <!-- member-list -->
     <div class="member-wrapper" id="member-wrapper">
       <h3>MEMBER</h3>
-      <table class="table table-bordered table-hover member-table">
+      <a class="collapse-button"
+      data-toggle="collapse"
+      href="#member-list"
+      role="button"
+      aria-expand="false"
+      aria-controls="member-list"
+      id="collapse-btn-member">+</a>
+      <table class="table table-bordered table-hover" id="member-table">
         <thead class="thead-dark">
           <tr>
             <th>ID</th>
@@ -40,7 +47,7 @@
             <th>REGIST DATE</th>
           </tr>
         </thead>
-        <div class="member-list">
+        <tbody class="member-list collapse" id="member-list">
           <!-- 要素の数だけ繰り返し表示 -->
           <tr>
             <td><a href="#">1000</a></td>
@@ -58,14 +65,21 @@
             <td>2019/06/07</td>
           </tr>
           <!-- 要素の数だけ繰り返し表示ここまで -->
-        </div>
+        </tbody>
       </table>
-      <a href="#" class="add-button">ADD</a>
+      <a href="#" class="button">ADD</a>
     </div>
     <!-- flyer-list -->
     <div class="flyer-wrapper" id="flyer-wrapper">
       <h3>FLYER</h3>
-      <table class="table table-bordered table-hover flyer-table">
+      <a class="collapse-button"
+      data-toggle="collapse"
+      href="#flyer-list"
+      role="button"
+      aria-expand="false"
+      aria-controls="flyer-list"
+      id="collapse-btn-flyer">+</a>
+      <table class="table table-bordered table-hover" id="flyer-table">
         <thead class="thead-dark">
           <tr>
             <th>ID</th>
@@ -73,7 +87,7 @@
             <th>LIVE DATE</th>
           </tr>
         </thead>
-        <div class="flyer-list">
+        <tbody class="flyer-list collapse" id="flyer-list">
           <!-- 要素の数だけ繰り返し表示 -->
           <tr>
             <td><a href="#">1000</a></td>
@@ -91,11 +105,39 @@
             <td>2012/05/15</td>
           </tr>
           <!-- 要素の数だけ繰り返し表示ここまで -->
-        </div>
+        </tbody>
       </table>
-      <a href="#" class="add-button">ADD</a>
+      <a href="#" class="button">ADD</a>
     </div>
   </div>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('collapse-btn-flyer').addEventListener('click', function() {
+        var icon = document.getElementById('collapse-btn-flyer').textContent;
+        if (icon === '+') {
+          document.getElementById('collapse-btn-flyer').textContent = '-';
+          return;
+        }
+        if (icon === '-') {
+          document.getElementById('collapse-btn-flyer').textContent = '+';
+          return;
+        }
+        return;
+      }, false);
+      document.getElementById('collapse-btn-member').addEventListener('click', function() {
+        var icon = document.getElementById('collapse-btn-member').textContent;
+        if (icon === '+') {
+          document.getElementById('collapse-btn-member').textContent = '-';
+          return;
+        }
+        if (icon === '-') {
+          document.getElementById('collapse-btn-member').textContent = '+';
+          return;
+        }
+        return;
+      }, false);
+    }, false);
+  </script>
 </body>
 
 </html>
