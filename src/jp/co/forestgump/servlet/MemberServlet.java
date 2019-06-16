@@ -10,28 +10,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * このアプリケーションを実行したときに最初に呼ばれるサーブレット。
- * 通常はindex.jspへフォワードする。
+ * Servlet implementation class MemberServlet
  */
-@WebServlet("/ApplicationServlet")
-public class ApplicationServlet extends HttpServlet {
+@WebServlet("/MemberServlet")
+public class MemberServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ApplicationServlet() {
+    public MemberServlet() {
         super();
     }
 
 	/**
-	 * このメソッドは2通りのパターンで呼び出される。
-	 * ①アプリケーションを実行したとき ... そのままindex.jspへフォワードする。
-	 * ②member.jspで戻るボタンを押下したとき ... そのままindex.jspへフォワードする。
+	 * index.jspからmember.jspへ遷移するときに実行されるメソッド。
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/index.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/member.jsp");
 		dispatcher.forward(request, response);
 	}
 

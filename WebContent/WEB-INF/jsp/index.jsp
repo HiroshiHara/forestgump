@@ -53,7 +53,7 @@
       癖の強すぎるだいたい15, 6人ぐらいのメンバーたち。<br>
       社会人バンドを名乗りつつも、社会というものがよくわかっていない。
     </p>
-    <a class="more-member button" href="member.html">MORE</a>
+    <a class="more-member button" href="/forestgump/MemberServlet">MORE</a>
   </section>
   <section class="contact" id="contact">
     <h2 class="heading">CONTACT</h2>
