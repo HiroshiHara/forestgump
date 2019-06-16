@@ -16,7 +16,7 @@
     <h1 class="header-title">MEMBERS</h1>
     <p class="intro-text">FGJWのサウンドを支える個性あふれるメンバー達。</p>
     <p class="intro-text">その一部をご紹介します。</p>
-    <a class="button" href="index.html">BACK</a>
+    <a class="button" href="/forestgump/top">BACK</a>
   </header>
   <div class="members">
     <!-- section要素がメンバーの数だけ繰り返し表示 -->
@@ -219,7 +219,7 @@
   </div>
   <footer class="footer item">
     <p class="footer-text">©Hiroshi Hara</p>
-    <a class="button" href="index.html">BACK</a>
+    <a class="button" href="/forestgump/top">BACK</a>
   </footer>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js" charset="utf-8"></script>
     <script type="text/javascript">

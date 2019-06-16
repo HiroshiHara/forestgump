@@ -4099,7 +4099,7 @@
     <mime-type>application/vnd.handheld-entertainment+xml</mime-type>
   </mime-mapping>
   <welcome-file-list>
-    <welcome-file>ApplicationServlet</welcome-file>
+    <welcome-file>top</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

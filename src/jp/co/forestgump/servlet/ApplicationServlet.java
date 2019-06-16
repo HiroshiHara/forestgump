@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * このアプリケーションを実行したときに最初に呼ばれるサーブレット。
  * 通常はindex.jspへフォワードする。
  */
-@WebServlet("/ApplicationServlet")
+@WebServlet("/top")
 public class ApplicationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
