@@ -8,6 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import jp.co.forestgump.beans.User;
+import jp.co.forestgump.logic.LoginLogic;
 
 /**
  * Servlet implementation class LoginServlet
@@ -24,7 +28,7 @@ public class LoginServlet extends HttpServlet {
     }
 
 	/**
-	 * ログインフォームを呼び出す。
+	 * login.jspへフォワードするメソッド。
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,12 +37,27 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	/**
-	 * 
+	 * ログインフォームから送信されてきたID, Passwordが正しければadmin.jspへフォワードするメソッド。
+	 * 認証に失敗すると再度login.jspへフォワードする。
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		HttpSession session = request.getSession();
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
+		User user = new User(id, password);
+		
+		if (LoginLogic.isValidUser(user)) {
+			// ユーザ情報をセッションスコープに保存
+			session.setAttribute("Admin", user);
+			// admin.jspへフォワード
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/admin.jsp");
+			dispatcher.forward(request, response);
+		}
+		// ユーザ情報をセッションスコープに保存
+		session.setAttribute("faultUser", user);
+		// 認証に失敗したらlogin.jspへフォワード
+		this.doGet(request, response);
 	}
 
 }

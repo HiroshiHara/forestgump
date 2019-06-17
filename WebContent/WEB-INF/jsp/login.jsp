@@ -9,7 +9,7 @@
 <body>
 	<form action="/forestgump/LoginServlet" method="post">
 		ID:<input type="text" name="id"><br>
-		NAME:<input type="password" name="password"><br>
+		PASSWORD:<input type="password" name="password"><br>
 		<input type="submit" value="LOGIN">
 	</form>
 </body>
