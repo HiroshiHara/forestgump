@@ -37,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	/**
-	 * ログインフォームから送信されてきたID, Passwordが正しければadmin.jspへフォワードするメソッド。
+	 * ログインフォームから送信されてきたID, Passwordが正しければadmin.jspへリダイレクトするメソッド。
 	 * 認証に失敗すると再度login.jspへフォワードする。
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -50,14 +50,12 @@ public class LoginServlet extends HttpServlet {
 		if (LoginLogic.isValidUser(user)) {
 			// ユーザ情報をセッションスコープに保存
 			session.setAttribute("Admin", user);
-			// admin.jspへフォワード
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/admin.jsp");
-			dispatcher.forward(request, response);
+			// admin.jspへリダイレクト
+			response.sendRedirect("/WEB-INF/jsp/admin.jsp");
+		} else {
+			// 認証に失敗したらlogin.jspへフォワード
+			this.doGet(request, response);
 		}
-		// ユーザ情報をセッションスコープに保存
-		session.setAttribute("faultUser", user);
-		// 認証に失敗したらlogin.jspへフォワード
-		this.doGet(request, response);
 	}
 
 }
