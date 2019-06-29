@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import="jp.co.forestgump.beans.User" %>
 <%
-// セッションスコープに"Admin"のキーでインスタンスが保存されていなければログイン失敗のメッセージを表示する
-User user = (User)session.getAttribute("Admin");
+// リクエストスコープにエラーメッセージが保存されていればフォームの下に表示
+String errorMsg = (String)request.getAttribute("ErrorMsg");
 %>
 <!DOCTYPE html>
 <html>
@@ -17,8 +17,8 @@ User user = (User)session.getAttribute("Admin");
 		PASSWORD:<input type="password" name="password"><br>
 		<input type="submit" value="LOGIN">
 	</form>
-	<% if (user == null) { %>
-		<p>faild to Authentification.</p>
+	<% if (errorMsg != null) { %>
+		<%= errorMsg.toString() %>
 	<% } %>
 </body>
 </html>

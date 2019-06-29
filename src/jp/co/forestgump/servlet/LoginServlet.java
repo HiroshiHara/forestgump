@@ -32,6 +32,11 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// セッションスコープにユーザー情報が残っていたら破棄する
+		HttpSession session = request.getSession();
+		if (session.getAttribute("Admin") != null) {
+			session.invalidate();
+		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
 		dispatcher.forward(request, response);
 	}
@@ -50,10 +55,13 @@ public class LoginServlet extends HttpServlet {
 		if (LoginLogic.isValidUser(user)) {
 			// ユーザ情報をセッションスコープに保存
 			session.setAttribute("Admin", user);
-			// admin.jspへリダイレクト
-			response.sendRedirect("/WEB-INF/jsp/admin.jsp");
+			// admin.jspへフォワード
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/admin.jsp");
+			dispatcher.forward(request, response);
 		} else {
-			// 認証に失敗したらlogin.jspへフォワード
+			// 認証に失敗したらエラーメッセージをリクエストスコープに保存
+			request.setAttribute("ErrorMsg", "faild to Autehntification.");
+			// login.jspへフォワード
 			this.doGet(request, response);
 		}
 	}

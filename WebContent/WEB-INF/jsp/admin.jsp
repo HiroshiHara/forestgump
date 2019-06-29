@@ -25,7 +25,7 @@
       <div class="navbar-nav">
         <a href="#member-wrapper" class="nav-item nav-link">MEMBER</a>
         <a href="#flyer-wrapper" class="nav-item nav-link">FLYER</a>
-        <a href="#" class="nav-item nav-link">LOGOUT</a>
+        <a href="/forestgump/login" class="nav-item nav-link">LOGOUT</a>
       </div>
     </div>
   </nav>
