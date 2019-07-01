@@ -61,13 +61,13 @@
       <input type="text" id="name" placeholder="NAME" autocomplete="off">
       <input type="email" id="email" placeholder="E-MAIL" autocomplete="off">
       <textarea id="message" placeholder="MESSAGE" autocomplete="off"></textarea>
-      <input id="submit" type="submit" value="SEND">
+      <input id="submit-contact" type="submit" value="SEND">
     </form>
   </section>
   <footer class="footer">
     © Hiroshi Hara
   </footer>
-  <script src="/forestgump/js/contact.js" charset="utf-8"></script>
+  <script src="/forestgump/js/formcheck.js" charset="utf-8"></script>
   <!-- IE9以前でもplaceholder属性が使えるようにするpolyfill -->
   <script src="/forestgump/js/placeholders.min.js" charset="utf-8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>

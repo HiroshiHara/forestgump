@@ -25,7 +25,13 @@ public class MemberDAO {
 			conn = DriverManager.getConnection(url, user, password);
 			String sql = "insert into member(member, memberid_nk, membername, memberpict, registdate)"
 					+ "values(?, ?, ?, ?, ?)";
-			
+			return true;
+		} catch (SQLException e) {
+			// TODO: handle exception
+			return false;
+		} catch (ClassNotFoundException e) {
+			// TODO: handle exception
+			return false;
 		}
 	}
 }

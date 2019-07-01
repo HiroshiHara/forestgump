@@ -60,7 +60,7 @@ public class LoginServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 		} else {
 			// 認証に失敗したらエラーメッセージをリクエストスコープに保存
-			request.setAttribute("ErrorMsg", "faild to Autehntification.");
+			request.setAttribute("ErrorMsg", "faild to Authentification.");
 			// login.jspへフォワード
 			this.doGet(request, response);
 		}
