@@ -1,0 +1,178 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #fff;
+  color: #3a382c;
+  font-size: 1.6rem;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: content-box;
+}
+.navbar-brand {
+  font-size: 2.5rem;
+  color: #f2964f !important;
+  letter-spacing: 2px;
+}
+.nav-item {
+  padding-left: 20px !important;
+}
+a {
+  text-decoration: none !important;
+  color: #3a382c;
+  font-weight: bold;
+}
+a:hover {
+  color: #f2964f;
+}
+.container {
+  padding-top: 30px;
+}
+h3 {
+  color: #3a382c;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.member-wrapper {
+  padding-bottom: 50px;
+}
+.flyer-wrapper {
+  padding-bottom: 50px;
+}
+.button {
+  display: inline-block;
+  color: #3a382c;
+  background-color: #f2964f;
+  text-align: center;
+  width: 70px;
+  height: 30px;
+  padding-top: 5px;
+  box-shadow: 0 5px rgba(170, 109, 61, 1);
+  -webkit-box-shadow: 0 5px rgba(170, 109, 61, 1);
+  -ms-box-shadow: 0 5px rgba(170, 109, 61, 1);
+}
+.button:active {
+  transform: translateY(5px);
+  -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+}
+.button:hover {
+  color: #3a382c;
+}
+h3 {
+  display: inline-block;
+}
+.collapse-button {
+  display: inline-block;
+  color: #3a382c;
+  background-color: #f2964f;
+  text-align: center;
+  width: 30px;
+  height: 15px;
+  padding-bottom: 6px;
+  box-shadow: 0 2.5px rgba(170, 109, 61, 1);
+  -webkit-box-shadow: 0 2.5px rgba(170, 109, 61, 1);
+  -ms-box-shadow: 0 2.5px rgba(170, 109, 61, 1);
+}
+.collapse-button:active {
+  transform: translateY(2.5px);
+  -webkit-transform: translateY(2.5px);
+  -ms-transform: translateY(2.5px);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+}
+.collapse-button:hover {
+  color: #3a382c;
+}
+/* modal-css */
+.modal-content input[type=text] {
+  width: 400px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: none;
+}
+.modal-content textarea {
+  width: 400px;
+  height: 100px;
+  padding: 5px;
+  margin-bottom: 15px;
+  border: none;
+}
+.modal-content input[type=date] {
+  width: 400px;
+
+  padding: 5px;
+  margin-bottom: 30px;
+  border: none;
+}
+input[type=submit] {
+  font-weight: bold;
+  width: 400px;
+  border: none;
+}
+.modal-content label > input[type=file] {
+  display: none;
+}
+.modal-content .file-button {
+  display: block;
+  padding: 5px 6px 1px;
+  margin: 0 auto 30px;
+  color: #3a382c;
+  background-color: #dbdbaf;
+  text-align: center;
+  font-weight: bold;
+  width: 400px;
+  height: 30px;
+  box-shadow: 0 5px rgba(176, 176, 139, 1);
+  -webkit-box-shadow: 0 5px rgba(176, 176, 139, 1);
+  -ms-box-shadow: 0 5px rgba(176, 176, 139, 1);
+}
+.modal-content .file-button:active {
+  transform: translateY(5px);
+  -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+}
+/* ファイル選択後のボタンcss */
+.modal-content .file-button-after {
+  display: block;
+  padding: 5px 6px 1px;
+  margin: 0 auto 30px;
+  color: #3a382c;
+  background-color: #faf47d;
+  text-align: center;
+  font-weight: bold;
+  width: 400px;
+  height: 30px;
+  transform: translateY(5px);
+  -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+}
+/* overwrite bootstrap.css */
+.collapsing {
+  transition: height 0.15s ease;
+  -webkit-transition: height 0.15s ease;
+  -ms-transition: height 0.15s ease;
+}
+.modal-content {
+  width: 600px;
+  height: 750px;
+  background-color: #ede6d0;
+  border-radius: 10px;
+}
+.modal-header {
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+  border-color: #f2964f;
+}
+.modal-body {
+  text-align: center;
+}
